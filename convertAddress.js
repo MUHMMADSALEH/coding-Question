@@ -26,5 +26,12 @@ function convertAddress(address) {
     return formattedAddress;
 }
 
+// Here's a quick breakdown:
+
+// It splits the address string by "." into an array of parts.
+// For each part, it uses .map() with a match(/.{1,2}/g) regex to break it into two-character chunks.
+// Then, it joins those chunks with ":".
+// Finally, it joins all parts with ":" to create the fully formatted address.
+
 console.log(convertAddress("1ac2.34f0.b1c2")); // Output: 1a:c2:34:f0:b1:c2
 console.log(convertAddress("abc1.20f1.345a")); // Output: ab:c1:20:f1:34:5a
